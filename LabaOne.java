@@ -4,8 +4,8 @@
                 {
                   final int ALEN = 20;
                   final int XLEN = 12;
-                  final int ELEN =20;
-                  final int EHEIGHT= 12;
+                  final int ELEN =12;
+                  final int EHEIGHT= 20;
 
                   short[] a;
                   a =new short[ALEN];
@@ -22,11 +22,11 @@
                     {
                       x[i] = randomiser(Math.random());
                     }
-                  double[][] e = new double [ELEN][EHEIGHT];
+                  double[][] e = new double [EHEIGHT][ELEN];
                   //e - массив 20х12
-                  for (int j = 0; j< EHEIGHT; j++)
+                  for (int i = 0; i< EHEIGHT; i++)
                     {
-                      for(int i = 0; i<ELEN;i++)
+                      for(int j = 0; j<ELEN;j++)
                         {
                           if(a[i]==8) e[i][j] = cond1(x[j]);
                           else if (a[i]==2|a[i]==3|a[i]==4|a[i]==5|a[i]==6|a[i]==9|a[i]==13|a[i]==15|a[i]==17|a[i]==20) e[i][j]= cond2(x[j]);
@@ -34,9 +34,9 @@
 
                         }
                     }
-                    for ( int j = 0; j<EHEIGHT;j++)
+                    for ( int i = 0; i<EHEIGHT;i++)
                       {
-                        for(int i=0;i<ELEN;i++)
+                        for(int j=0;j<ELEN;j++)
                           {
                             System.out.printf("%.5f", e[i][j]);
                             System.out.print(" ");
