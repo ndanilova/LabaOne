@@ -30,18 +30,19 @@ class LabaOne {
                                              Math.pow((1/3d)*vmestox3/Math.PI,2))));
       }
 
-      public static short[] fillArray() {
-          short[] arrayIncrease = new short[ALEN];
-          for (int anum = 0; anum < arrayIncrease.length ; anum++) {
-              arrayIncrease[anum] = (short)(anum + 1);
+      public static short[] fillArrayFromOneToLength(short[] massivForFill) {
+
+          for (int anum = 0; anum < massivForFill.length ; anum++) {
+              massivForFill[anum] = (short)(anum + 1);
 
           }
-          return arrayIncrease;
+          return massivForFill;
       }
 
        public static double[][] matrixFiller(){
           double[][] metMatrix = new double [EHEIGHT][ELEN];
-          short[] afiller = fillArray();
+          short[] afiller = new short[ALEN];
+          fillArrayFromOneToLength(afiller);
           double[] xfiller = new double[XLEN];
 
           for (int i = 0; i < xfiller.length; i++){
